@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RecyclerViewStudy</string>
+    <string name="text_hello">привет</string>
+    <string name="text_how_are_you">как дела?</string>
+    <string name="text_click_on_me">нажми на меня</string>
+    <string name="color_txt_white">белый</string>
+    <string name="address_txt_piter">питер</string>
+    <string name="size_txt_30">30</string>
 </resources>
