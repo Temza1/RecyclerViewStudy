@@ -9,22 +9,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.moinonemoi.recyclerviewstudy.gift.GiftActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     Button button1;
     Button button2;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.txtViewHello);
-        button1 = (Button) findViewById(R.id.buttonClickOnMe);
-        button2 = (Button) findViewById(R.id.button_second_page);
+        textView = findViewById(R.id.txtViewHello);
+        button1 = findViewById(R.id.buttonClickOnMe);
+        button2 = findViewById(R.id.button_second_page);
 
         button1.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceType")
             @Override
             public void onClick(View view) {
                 textView.setText(R.string.text_how_are_you);
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Gift.class);
+                Intent intent = new Intent(MainActivity.this, GiftActivity.class);
                 startActivity(intent);
             }
         });

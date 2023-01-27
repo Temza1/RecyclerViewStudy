@@ -1,4 +1,4 @@
-package com.moinonemoi.recyclerviewstudy;
+package com.moinonemoi.recyclerviewstudy.gift;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moinonemoi.recyclerviewstudy.R;
+
 import java.util.List;
 
 public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
@@ -17,7 +19,7 @@ public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
     private ViewHolder holder;
     private int position;
 
-    GiftAdapter(Context context, List<Gift> gifts){
+    GiftAdapter(Context context, List<Gift> gifts) {
         this.gifts = gifts;
         this.inflater = LayoutInflater.from(context);
     }
@@ -25,7 +27,7 @@ public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.gift, parent, false);
+        View view = inflater.inflate(R.layout.activity_gift, parent, false);
         return new ViewHolder(view);
     }
 
@@ -45,11 +47,10 @@ public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView address,size,color;
+        TextView address, size, color;
 
         public ViewHolder(View view) {
             super(view);
-
             address = view.findViewById(R.id.address_txt);
             size = view.findViewById(R.id.size_txt);
             color = view.findViewById(R.id.color_txt);
